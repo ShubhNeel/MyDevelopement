@@ -29,6 +29,7 @@ public class WordCount extends Configured implements Tool {
 		Path inputPath=new Path(args[0]);
 		Path outputPath=new Path(args[1]);
 		Configuration conf = new Configuration();
+		
 		Job job = new Job(conf,"word count");
 		job.setJarByClass(WordCount.class);
 		job.setMapperClass(WordMapper.class);
